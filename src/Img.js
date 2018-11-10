@@ -10,9 +10,9 @@ const ImageResource = createResource(src => {
   });
 });
 
-const Image = props => {
+const Img = props => {
   ImageResource.read(props.src);
   return <img {...props} />;
 };
 
-export default Image;
+export default Img;

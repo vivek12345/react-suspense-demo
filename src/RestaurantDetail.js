@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import Spinner from "react-svg-spinner";
 import { createResource } from "./createResource";
-import Image from "./Image";
+import Img from "./Img";
 
 const RestaurantDetailResource = createResource(restaurantId => {
   return new Promise((resolve, reject) => {
@@ -26,7 +26,7 @@ const RestaurantDetail = props => {
       <h1 className="f2">{restaurantDetails.name}</h1>
       <div className="container">
         <Suspense fallback={<Spinner />}>
-          <img
+          <Img
             src="https://i.imgur.com/HPl8Sts.jpg"
             className="center f5 measure"
             alt="outer space"
